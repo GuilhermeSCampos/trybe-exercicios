@@ -8,3 +8,5 @@ JavaScript
 NodeJS
 React
 Redux
+Html
+CSS
