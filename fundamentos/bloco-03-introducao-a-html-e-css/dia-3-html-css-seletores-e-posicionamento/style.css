@@ -1,50 +1,60 @@
-/* Estilize as divs para que, ao passar o cursor por cima das mesmas, elas ganhem uma borda. */
-div:hover {
-  border:1px solid red;
-}
-/* Faça cada div ter uma cor própria. */
-div:nth-of-type(1){
-  color: aqua;
+
+ol li:nth-child(odd) {
+  background-color: yellow;
+  text-transform:uppercase;
 }
 
-div:nth-of-type(3) {
-  color: brown;
-  width: 100px;
-  height: 200px;
-}
-div:nth-of-type(4) {
-  color: rgb(84, 25, 201);
-}
-div:nth-of-type(5) {
-  color: rgb(52, 19, 19);
+ol li:nth-child(even) {
+  background-color: yellow;
+  color: green;
 }
 
-/* Estilize cada uma das tags h3 . */
-
-div:nth-of-type(1) > h3{
-  background-color:rosybrown
-  
+h1,h2,h3,h4,h5,h6 {
+  color: red;
 }
 
-div:nth-of-type(2) > h3{
-  background-color: aqua;
+.ita {
+  font-size: 40px;
+  border: 1px solid black;
 }
 
-div:nth-of-type(3) > h3{
-  background-color: red;
+
+li {
+  font-size: 20px;
 }
 
-div:nth-of-type(4) > h3{
+li em {
+  font-weight: 600;
+}
+
+.linguagens li:not(:nth-child(n + 4)) {
+  color:red;
+}
+
+.java {
   background-color: pink;
 }
 
-/* Faça a terceira div ser maior que as demais. */
-
-
-div:nth-of-type(5) > h3{
-  background-color: purple;
+.sites li:hover {
+  font-weight: 700;
+}
+.sites li a[href*="stackoverflow"] {
+  color:orange;
 }
 
-div:nth-child(odd) h3 {
-  font-style: italic
+.sites li a[href*="w3schools"] {
+  color:green;
 }
+.sites li a[href*="mdn"] {
+  color:black;
+}
+
+.sites li a[href*="devdocs"] {
+  color:yellow;
+}
+
+.sites li a[href*="trybe"] {
+  color:green;
+}
+
+
