@@ -1,0 +1,60 @@
+
+ol li:nth-child(odd) {
+  background-color: yellow;
+  text-transform:uppercase;
+}
+
+ol li:nth-child(even) {
+  background-color: yellow;
+  color: green;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: red;
+}
+
+.ita {
+  font-size: 40px;
+  border: 1px solid black;
+}
+
+
+li {
+  font-size: 20px;
+}
+
+li em {
+  font-weight: 600;
+}
+
+.linguagens li:not(:nth-child(n + 4)) {
+  color:red;
+}
+
+.java {
+  background-color: pink;
+}
+
+.sites li:hover {
+  font-weight: 700;
+}
+.sites li a[href*="stackoverflow"] {
+  color:orange;
+}
+
+.sites li a[href*="w3schools"] {
+  color:green;
+}
+.sites li a[href*="mdn"] {
+  color:black;
+}
+
+.sites li a[href*="devdocs"] {
+  color:yellow;
+}
+
+.sites li a[href*="trybe"] {
+  color:green;
+}
+
+
