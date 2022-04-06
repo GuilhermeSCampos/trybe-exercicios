@@ -1,0 +1,124 @@
+* {
+    margin:0;
+}
+
+body {
+    background-color: #cfb698;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #f0a830;
+    height: 60px;
+}
+.primary {
+    height: 200px
+}
+
+#h11 {
+    position:relative;
+    top: 10px;
+}
+
+header, nav {
+    text-align: center;
+}
+
+nav a {
+    font-size: 18px;
+    display: inline-block;
+    margin-right: 50px;
+    margin-top: 10px;
+}
+
+table,th,td{
+    border: 1px solid black;
+}
+
+.a1 {
+    text-align: center;
+}
+
+#fact {
+    height: 60px;
+    font-size: 40px;
+    margin-bottom: 60px;
+}
+
+#foto1 {
+    position: relative;
+    right: 30%;
+}
+
+.general {
+
+    width: 500px;
+    font-size: 20px;
+    position: relative;
+    left:40%;
+    bottom: 350px;
+}
+.title-table{
+    position:relative;
+    font-size: 30px;
+    margin-bottom: 14px;
+    bottom: 130px;
+}
+
+table {
+    position: relative;
+    left: 32%;
+    font-size: 20px;
+    bottom: 130px;
+}
+
+.fun-facts {
+    text-align: center;
+}
+#facts-title{
+    font-size: 27px;
+    position: relative;
+    bottom:40px;
+}
+#foto2 {
+    position: relative;
+    right: 30%;
+    bottom: 20px;
+}
+
+.fact1 {
+    font-size: 20px;
+}
+#text1,#text2{
+    width: 600px;
+    font-size: 20px;
+    position: relative;
+    left:35%;
+    bottom: 250px;
+}
+
+#foto3 {
+    position: relative;
+    right: 30%;
+    bottom: 20px;
+}
+#facts-title2{
+    font-size: 20px;
+}
+
+.ref {
+    font-size: 20px;
+    display: inline-block;
+}
+footer {
+    text-align: center;
+}
+
+aside{
+    width: 100px;
+    position: relative;
+    text-transform: uppercase;
+    border: 1px solid black;
+    left:75%;
+    bottom:500px;
+}
