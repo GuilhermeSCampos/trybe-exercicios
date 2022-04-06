@@ -1,9 +1,11 @@
-const a = 0;
+const a = 60;
+const b = 61;
+const c = 60;
+soma = a + b + c;
 
-if (a > 0) {
-    console.log("positive")
-}else if (a < 0) {
-    console.log("negative")
+if (soma === 180) {
+    console.log(true);
 } else {
-    console.log("zero")
+    console.log(false);
+    console.log("Angulos inválidos, a soma dos angulos deve ser 180!");
 }
