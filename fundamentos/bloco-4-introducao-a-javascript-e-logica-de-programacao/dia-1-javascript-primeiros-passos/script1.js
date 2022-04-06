@@ -1,9 +1,9 @@
-const a = 70;
-const b = 10;
-const c = 2;
+const a = 15;
+const b = 35;
+let lucro = b - a*1.2;
 
-if ((a%2 !== 0) || (b % 2 !== 0) || (c % 2 !== 0)) {
-    console.log(true);
+if (a > 0 && b > 0) {
+    console.log("O lucro de mil vendas desse produto será de:",lucro*1000);
 } else {
-    console.log(false);
+    console.log("Valor Inválido!")
 }
