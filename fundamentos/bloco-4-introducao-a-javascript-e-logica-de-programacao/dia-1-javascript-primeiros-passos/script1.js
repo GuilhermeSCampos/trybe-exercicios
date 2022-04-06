@@ -1,31 +1,17 @@
-let peca = "Rainha";
-peca = peca.toLowerCase();
+let x = 123;
 
-switch (peca) {
-    case "peão":
-        console.log("Peão --> Uma casa à frente, captura diagonal.");
-        break;
-
-    case "rei":
-        console.log("Rei --> Move uma casa para qualquer direção e não pode encostar em outro rei.");
-        break;
-    
-    case "bispo":
-        console.log("Bispo --> Move na diagonal.");
-        break;
-    
-    case "rainha":
-        console.log("Rainha --> Move para qualquer direção.");
-        break;
-
-    case "cavalo":
-        console.log("Cavalo --> Move  3 casas em L.");
-        break;
-    
-    case "torre":
-        console.log("Torre --> Move na horizontal e vertical.");
-        break;
-
-    default:
-        console.log("Peça inválida!")
+if (x >= 90 && x <= 100) {
+    console.log("A");
+} else if (x >= 80 && x < 90) {
+    console.log("B");
+} else if (x >= 70 && x < 80) {
+    console.log("C");
+} else if (x >= 60 && x < 70) {
+    console.log("D")
+} else if (x >= 50 && x < 60) {
+    console.log("E")
+} else if (x >= 0 && x < 50) {
+    console.log("F")
+} else {
+    console.log("Valor inválido! Coloque um valor entre 0 e 100 inclusive.")
 }
