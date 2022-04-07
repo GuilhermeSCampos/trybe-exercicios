@@ -1,16 +1,10 @@
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
-let soma = 0;
+let maior = 0;
 
-for (let index = 0; index < numbers.length; index += 1) {
-    soma = soma + numbers[index];
-
+for (let index = 0; index <numbers.length; index += 1) {
+    if (maior < numbers[index]) {
+        maior = numbers[index];
+    }
 }
 
-let media = soma/numbers.length;
-
-console.log(media);
-if (media > 20) {
-    console.log("Valor maior que 20!");
-} else {
-    console.log("Valor meno ou igual a 20!");
-}
+console.log("Maior número: ",maior);
