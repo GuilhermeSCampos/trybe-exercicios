@@ -1,9 +1,7 @@
-let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
-let menor = numbers[0];
+let numbers = [];
 
-for (let index = 0; index <numbers.length; index += 1) {
-    if (menor > numbers[index]) {
-        menor = numbers[index];
-    }
+for (let index = 0; index < 25; index += 1) {
+    numbers.push(index + 1);
 }
-console.log("Menor Valor: ",menor);
+
+console.log(numbers);
