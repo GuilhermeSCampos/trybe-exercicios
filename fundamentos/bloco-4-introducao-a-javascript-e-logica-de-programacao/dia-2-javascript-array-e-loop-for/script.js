@@ -1,9 +1,12 @@
-let numbers = [];
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
-for (let index = 0; index < 25; index += 1) {
-    numbers.push(index + 1);
+for (let index = 1; index < numbers.length; index += 1) {
+    for (let index2 = 0; index2 < index; index2 += 1) {
+        if (numbers[index2] > numbers[index]) {
+            let position = numbers[index];
+            numbers[index] = numbers[index2];
+            numbers[index2] = position;
+        }
+    }
 }
-
-for (let index = 0; index < numbers.length; index += 1) {
-    console.log(numbers[index]/2);
-}
+console.log(numbers);
