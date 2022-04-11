@@ -1,20 +1,18 @@
-function verificarPalindromo(palavra) {
-    let cont = palavra.length;
-    for (let index of palavra) {
-        if(index === palavra[cont - 1]) {
-        return true;
-        cont -= 1
+function smaller(inteiros) {
+    let temp = 0;
+    let a;
+    for (let index in inteiros) {
+        if (temp < inteiros[index]) {
+            temp = inteiros[index];
+            a = [index];
         }
-        else {
-            return false;
-            break;
-        }
+
     }
-    
+    return a;
 }
+let array = [2, 3, 6, 7, 10, 1];
 
-console.log(verificarPalindromo('desenvolvimento'));
-
+console.log(smaller(array));
 
 
 
