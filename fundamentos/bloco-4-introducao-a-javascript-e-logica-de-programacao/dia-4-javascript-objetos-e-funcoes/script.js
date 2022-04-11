@@ -1,11 +1,14 @@
-function somatorio(natural) {
-    let soma = 0;
-    for (let index = 1; index <= natural; index += 1) {
-        soma += index;
+function verificarFimPalavra(word, ending) {
+    for (let index = ending.length - 1; index >= 0; index -= 1) {
+        if (ending[index] === word[word.length - 1]) {
+            return true;
+        } else {
+            return false;
+        }
     }
-    return soma;
 }
 
-let n = 1000;
+let a = 'trybe';
+let b = 'be';
 
-console.log(somatorio(n));
+console.log(verificarFimPalavra(a,b));
