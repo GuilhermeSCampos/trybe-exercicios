@@ -6,5 +6,5 @@ let info = {
   };
 
 for (let index in info) {
-    console.log(info);
+    console.log(info[index]);
 }
