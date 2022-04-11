@@ -5,6 +5,13 @@ let info = {
     recorrente: 'Sim'
   };
 
+  let info2 = {
+    personagem: 'Tio Patinhas',
+    origem: "Christmas on Bear Mountain, Dell's Four Color Comics #178",
+    nota: 'O último MacPatinhas',
+    recorrente: 'Sim'
+  };
+
 for (let index in info) {
-    console.log(info[index]);
+    console.log(info[index] + " e " + info2[index]);
 }
