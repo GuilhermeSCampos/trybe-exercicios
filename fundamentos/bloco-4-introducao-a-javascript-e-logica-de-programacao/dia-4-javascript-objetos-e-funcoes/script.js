@@ -1,17 +1,13 @@
 function smaller(inteiros) {
-    let temp = inteiros[0];
-    let a;
-    for (let index in inteiros) {
-        if (temp > inteiros[index]) {
-            temp = inteiros[index];
-            a = [index];
+    let a = "";
+    for (let index of inteiros) {
+        if (a.length < index.length) {
+            a = index;
         }
-
     }
-    return a
+    return a;
 }
-let array = [2, 4, 6, 7, 10, 0, -3];
-
+let array = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
 console.log(smaller(array));
 
 
