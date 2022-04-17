@@ -58,18 +58,21 @@
   <body>
     <script>
         //questão 1
-      const element1 = document.createElement("h1");
-      element1.innerText = "Exercício 5.2 - JavaScript DOM";
-      document.body.appendChild(element1);
+      const h1 = document.createElement("h1");
+      h1.innerText = "Exercício 5.2 - JavaScript DOM";
+      document.body.appendChild(h1);
       //questão 2
-      const element2 = document.createElement("main");
-      element2.className = "main-content";
-      document.body.appendChild(element2);
+      const main = document.createElement("main");
+      main.className = "main-content";
+      document.body.appendChild(main);
       //questão 3
-      const element3 = document.createElement("section");
-      element3.className = "center-content";
-      main.appendChild(element3);
+      const section1 = document.createElement("section");
+      section1.className = "center-content";
+      main.appendChild(section1);
       //questão 4
+      const p1 = document.createElement("p");
+      p1.innerText = "Algum texto";
+      section1.appendChild(p1);
     </script>
   </body>
 </html>
