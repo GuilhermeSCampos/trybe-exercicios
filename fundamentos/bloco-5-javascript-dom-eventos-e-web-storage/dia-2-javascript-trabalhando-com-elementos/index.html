@@ -106,10 +106,12 @@
 
     //questão 2.2
     const h3Elements = document.getElementsByTagName("h3");
-    
     for (let index = 0; index < h3Elements.length; index += 1) {
         h3Elements[index].className = "description";
     }
+    //questão 3.2
+    const element = document.getElementsByClassName("left-content")[0];
+    main.removeChild(element);
     </script>
   </body>
 </html>
