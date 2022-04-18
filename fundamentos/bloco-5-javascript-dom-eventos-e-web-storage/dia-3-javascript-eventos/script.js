@@ -49,18 +49,18 @@ function createDaysOfTheWeek() {
 
 //exercicio 3
 const btnFeriados = document.querySelector("#btn-holiday");
-let buttonClick = false;
+let buttonClickHoliday = false;
 btnFeriados.addEventListener("click", function () {
     let daysH = document.getElementsByClassName("holiday");
-    if (buttonClick === false) {
+    if (buttonClickHoliday === false) {
         for (let index = 0; index < daysH.length; index += 1) {
             daysH[index].style.backgroundColor = "red";
         }
-        buttonClick = true;
+        buttonClickHoliday = true;
     } else {
         for (let index = 0; index < daysH.length; index += 1) {
             daysH[index].style.backgroundColor = "rgb(238,238,238)";
-            buttonClick = false;
+            buttonClickHoliday = false;
         }
     }
 })
@@ -73,3 +73,25 @@ function criarBotaoSexta(string) {
     container.appendChild(botaoSexta);
 }
 criarBotaoSexta("Sexta-Feira");
+
+//exercicio 5
+let buttonClickFriday = false;
+let botaoSexta = document.querySelector("#btn-friday");
+botaoSexta.addEventListener("click", function () {
+    let sextaFeira = document.querySelectorAll(".friday");
+    console.log(buttonClickFriday);
+    if (buttonClickFriday === false) {
+        for (let i = 0; i < sextaFeira.length; i += 1) {
+            sextaFeira[i].innerText = "SEXXXTOU!";
+        }
+        buttonClickFriday = true;
+        console.log(buttonClickFriday);
+    } else {
+        sextaFeira[0].innerText = 4;
+        sextaFeira[1].innerText = 11;
+        sextaFeira[2].innerText = 18;
+        sextaFeira[3].innerText = 25;
+        buttonClickFriday = false;
+        console.log(buttonClickFriday);
+    }
+})
