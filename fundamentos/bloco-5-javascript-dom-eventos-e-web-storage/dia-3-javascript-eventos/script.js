@@ -47,3 +47,22 @@ function createDaysOfTheWeek() {
     console.log(botao.id)
   }
   criarBotao("Feriados");
+
+//exercicio 3
+const btnFeriados = document.querySelector("#btn-holiday");
+let buttonClick = false;
+btnFeriados.addEventListener("click", function () {
+    let daysH = document.getElementsByClassName("holiday");
+    if (buttonClick === false) {
+        for (let index = 0; index < daysH.length; index += 1) {
+            daysH[index].style.backgroundColor = "red";
+        }
+        buttonClick = true;
+    } else {
+        for (let index = 0; index < daysH.length; index += 1) {
+            daysH[index].style.backgroundColor = "rgb(238,238,238)";
+            buttonClick = false;
+        }
+    }
+})
+
