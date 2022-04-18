@@ -38,15 +38,14 @@ function createDaysOfTheWeek() {
   createDays();
   
   //exercicio 2
-  function criarBotao(string) {
+  function criarBotaoFeriado(string) {
     let container = document.querySelector(".buttons-container") 
     let botao = document.createElement("button");
     botao.id = "btn-holiday";
     botao.innerHTML = string;
     container.appendChild(botao);
-    console.log(botao.id)
   }
-  criarBotao("Feriados");
+  criarBotaoFeriado("Feriados");
 
 //exercicio 3
 const btnFeriados = document.querySelector("#btn-holiday");
@@ -65,4 +64,12 @@ btnFeriados.addEventListener("click", function () {
         }
     }
 })
-
+//exercicio 4
+function criarBotaoSexta(string) {
+    let container = document.querySelector(".buttons-container");
+    let botaoSexta = document.createElement("button");
+    botaoSexta.id = "btn-friday";
+    botaoSexta.innerHTML = string;
+    container.appendChild(botaoSexta);
+}
+criarBotaoSexta("Sexta-Feira");
