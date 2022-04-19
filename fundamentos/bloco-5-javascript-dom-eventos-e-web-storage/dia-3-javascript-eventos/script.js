@@ -124,3 +124,14 @@ function adicionaTarefa(String) {
     tarefas.appendChild(tarefa);
 }
 adicionaTarefa("cozinhar");
+
+//exercicio 8
+function adicionarCor(cor) {
+    let tarefas = document.querySelector(".my-tasks");
+    let tarefa = document.createElement("div");
+    tarefa.classList.add("task");
+    tarefa.style.backgroundColor = cor;
+    tarefas.appendChild(tarefa);
+}
+
+adicionarCor("red");
