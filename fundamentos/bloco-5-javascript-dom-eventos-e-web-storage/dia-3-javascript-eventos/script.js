@@ -170,3 +170,34 @@ function clickDate() {
 }
 
 clickDate();
+
+//bonus 
+function addTask() {
+    let botao = document.querySelector("#btn-add");
+    let taskList = document.querySelector(".task-list");
+    let inputField = document.querySelector("#task-input");
+
+    botao.addEventListener("click", function() {
+        if (inputField.value.length > 0) {
+            let newLi = document.createElement("li");
+            newLi.innerText = inputField.value;
+
+            taskList.appendChild(newLi);
+            inputField.value = "";
+        } else {
+            alert("Digite ao menos 1 caractere!");
+        }
+    })
+
+    inputField.addEventListener("keyup", function(event) {
+        if (event.key === "Enter" && inputField.value.length > 0) {
+            let newLi = document.createElement("Li");
+            newLi.innerText = inputField.value;
+
+            taskList.appendChild(newLi);
+            inputField.value = "";
+        }
+    })
+}
+
+addTask();  
