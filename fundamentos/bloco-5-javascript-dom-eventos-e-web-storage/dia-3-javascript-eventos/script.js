@@ -150,3 +150,23 @@ function selectTask() {
     })
 }
 selectTask();
+
+//exercicio 10
+let buttonClickTask = false;
+function clickDate() {
+    let daysMonth = document.querySelector("#days");
+
+    daysMonth.addEventListener("click", function(event) {
+        let dia = event.target;
+        let selected = document.getElementsByClassName("task selected")[0];
+        if (buttonClickTask === false) {
+            dia.style.color = selected.style.backgroundColor;
+            buttonClickTask = true;
+        } else {
+            dia.style.color = "rgb(119,119,119";
+            buttonClickTask = false
+        }
+    })
+}
+
+clickDate();
