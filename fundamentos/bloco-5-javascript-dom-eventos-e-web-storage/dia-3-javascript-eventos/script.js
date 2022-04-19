@@ -115,3 +115,12 @@ function mouseOut() {
 mouseOver();
 mouseOut();
 
+//exercicio 7
+function adicionaTarefa(String) {
+    let tarefas = document.querySelector(".my-tasks");
+    let tarefa = document.createElement("span");
+
+    tarefa.innerText = String;
+    tarefas.appendChild(tarefa);
+}
+adicionaTarefa("cozinhar");
