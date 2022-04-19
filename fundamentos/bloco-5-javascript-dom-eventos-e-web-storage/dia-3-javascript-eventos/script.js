@@ -135,3 +135,18 @@ function adicionarCor(cor) {
 }
 
 adicionarCor("red");
+
+//exercicio 9
+function selectTask() {
+    let tasks = document.querySelector(".task");
+
+    tasks.addEventListener("click", function(event) {
+        if (event.target.className === "task") {
+            event.target.className = "task selected"
+        } else {
+            event.target.className = "task"
+        }
+        console.log(event.target.className);
+    })
+}
+selectTask();
