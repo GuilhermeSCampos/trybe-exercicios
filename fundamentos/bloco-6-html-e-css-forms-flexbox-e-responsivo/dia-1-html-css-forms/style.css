@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(https://img.freepik.com/vetores-gratis/fundo-pintado-a-mao-nas-cores-violetas-e-laranja_23-2148427578.jpg?w=2000);
+    background-size: cover;
+}
+
+.div-line {
+    margin-top:20px;
+    margin-left: 10px;
+}
+
+.radio {
+    margin-left: 10px;
+}
+
+header {
+    font-family: Montserrat;
+    text-align: center;
+    color:rgb(223, 222, 219);
+}
+
+#form-row {
+    background-color:rgb(223, 222, 219);
+    font-family: Montserrat;
+    margin-top: 50px;
+    width: fit-content;
+    height: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px solid rgb(146, 105, 105);
+    border-radius: 10px;
+}
+
+textarea {
+    padding: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+#clear {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-left: 10px;
+}
