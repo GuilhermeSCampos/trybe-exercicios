@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>
+            Formulário de Viagem
+        </h1>
+    </header>
+
+    <main>
+        <form action="" method="get">
+            <div id="form-row">
+                <div class="div-line">
+                    <label for="nome-completo">Nome:
+                        <input name="nome" id="nome-completo" type="text" maxlength="40" minlength="10" placeholder="Digite seu nome">
+                    </label>    
+                </div>
+                <div class="div-line">
+                    <label for="email">Email:
+                        <input name="email" id="email" type="text" maxlength="50" minlength="10" placeholder="Email">
+                    </label>    
+                </div>
+                <div class="div-line">
+                    <div id="text">Escolha o destino preferido</div>
+                    <input type="radio" name="destino" value="Cidade" id="Cidade"><label for="Cidade">Cidade</label>
+                    <input class ="radio" type="radio" name="destino" value="Campo" id="Campo"><label for="Campo">Campo</label>
+                    <input class ="radio" type="radio" name="destino" value="Praia" id="Praia"><label for="Praia">Praia</label>
+                    <input class ="radio" type="radio" name="destino" value="Montanhas" id="Montanhas"><label for="Montanhas">Montanhas</label>
+                </div>
+                <div class="div-line">
+                    <div id="text2">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</div>
+                    <textarea rows="10" cols="50" maxlength="500"  name="motivo"></textarea>
+                </div>
+                <div class="div-line">
+                    <div id="text3">Qual a melhor data para realizar sua viagem?</div>
+                    <input type="date" name="best-date"  id="date">
+                </div>
+                <div class="div-line">
+                    <label for="concordo1">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?<br><input type="checkbox" value="concordo1" id="concordo1" name="concordo1"></label>
+                </div>
+                <div class="div-line">
+                    <label for="concordo2">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.<br><input type="checkbox"  id="concordo2" name="concordo2"></label>
+                </div>
+                <div class="div-line">
+                    <button id="submit" type="submit">Enviar Informações</button>
+                    <button id="clear" type="reset">Limpar Formulário</button>
+                </div>
+            </div>
+        </form>
+        
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
