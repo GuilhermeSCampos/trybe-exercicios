@@ -1,13 +1,16 @@
-const testingScope = (escopo) => {
-    if (escopo === true) {
-      var ifScope = `Não devo ser utilizada fora do meu escopo (if)`;
-      ifScope = ifScope + ` ótimo, fui utilizada no escopo !`;
-      console.log(ifScope);
-    } else {
-      var elseScope = `Não devo ser utilizada fora meu escopo (else)`;
-      console.log(elseScope);
-    }
-    console.log(ifScope + ` o que estou fazendo aqui ? :O`); // Se necessário esta linha pode ser removida.
-  }
+const oddsAndEvens = [13, 3, 4, 10, 7, 2];
 
-  testingScope(false);
+// Seu código aqui.
+const crescente = array => {
+    // for (let i = 0; i < array.length - 1; i += 1) {
+    //     for (let j = 0; j < array.length - 1 - i; j += 1) {
+    //         if (array[j] > array[j + 1]) {
+    //             let temp = array[j];
+    //             array[j] = array[j + 1];
+    //             array[j + 1] = temp;
+    //         }
+    //     }
+    // }
+    return array;
+}
+console.log(crescente(oddsAndEvens)); // será necessário alterar essa linha 😉
