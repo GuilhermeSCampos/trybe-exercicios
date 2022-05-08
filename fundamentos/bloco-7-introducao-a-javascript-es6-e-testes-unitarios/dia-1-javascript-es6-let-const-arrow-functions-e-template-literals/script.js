@@ -1,17 +1,9 @@
-const oddsAndEvens = [13, 3, 4, 10, 7, 2];
-
-// Seu código aqui.
-const crescente = array => {
-    // for (let i = 0; i < array.length - 1; i += 1) {
-    //     for (let j = 0; j < array.length - 1 - i; j += 1) {
-    //         if (array[j] > array[j + 1]) {
-    //             let temp = array[j];
-    //             array[j] = array[j + 1];
-    //             array[j + 1] = temp;
-    //         }
-    //     }
-    // }
-    
-    return array.sort((a,b) => {return a - b});
+const fatorial = (number) => {
+  let multiplicacao = 1;
+  for (let i = 1; i <= number; i += 1) {
+    multiplicacao = multiplicacao * i;
+  }  
+  return multiplicacao;
 }
-console.log(crescente(oddsAndEvens)); // será necessário alterar essa linha 😉
+
+console.log(fatorial(4));
