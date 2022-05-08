@@ -11,6 +11,7 @@ const crescente = array => {
     //         }
     //     }
     // }
-    return array;
+    
+    return array.sort((a,b) => {return a - b});
 }
 console.log(crescente(oddsAndEvens)); // será necessário alterar essa linha 😉
