@@ -1,7 +1,6 @@
-const button = document.getElementById("botao");
-let clickerCount = 0;
+const changex = (coisa) => {
+  let string = `Tryber ${coisa} aqui`;
+  return string
+}
 
-button.addEventListener("click", () => {
-  clickerCount += 1;
-  document.getElementById("click").innerText = clickerCount;
-})
+console.log(changex('aaaaa'));
