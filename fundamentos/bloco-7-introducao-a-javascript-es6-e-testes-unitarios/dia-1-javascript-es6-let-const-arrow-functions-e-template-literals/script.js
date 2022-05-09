@@ -1,13 +1,7 @@
-const longestWord = string => {
-  const frase = string.split(' ');
-  let Palavra = "";
+const button = document.getElementById("botao");
+let clickerCount = 0;
 
-  for (let i = 0; i < frase.length; i += 1) {
-    if (frase[i].length > Palavra.length) {
-      Palavra = frase[i];
-    }
-  }
-  return Palavra;
-}
-
-console.log(longestWord('Antônio foi no banheiro e não sabemos o que aconteceu'));
+button.addEventListener("click", () => {
+  clickerCount += 1;
+  document.getElementById("click").innerText = clickerCount;
+})
