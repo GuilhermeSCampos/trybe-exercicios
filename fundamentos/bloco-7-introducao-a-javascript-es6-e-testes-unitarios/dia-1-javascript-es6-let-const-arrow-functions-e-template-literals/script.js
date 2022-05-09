@@ -1,9 +1,13 @@
-const fatorial = (number) => {
-  let multiplicacao = 1;
-  for (let i = 1; i <= number; i += 1) {
-    multiplicacao = multiplicacao * i;
-  }  
-  return multiplicacao;
+const longestWord = string => {
+  const frase = string.split(' ');
+  let Palavra = "";
+
+  for (let i = 0; i < frase.length; i += 1) {
+    if (frase[i].length > Palavra.length) {
+      Palavra = frase[i];
+    }
+  }
+  return Palavra;
 }
 
-console.log(fatorial(4));
+console.log(longestWord('Antônio foi no banheiro e não sabemos o que aconteceu'));
