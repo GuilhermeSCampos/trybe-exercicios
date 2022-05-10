@@ -55,8 +55,6 @@ const getValueByNumber = (obj, keyposition) => {
   return obj[keys[keyposition]];
 }
 
-console.log(getValueByNumber(lesson1, 0));
-
 const verifyPair = (obj, key, value) => {
   if (obj[key] === value) {
     return true;
@@ -65,5 +63,32 @@ const verifyPair = (obj, key, value) => {
   }
 }
 
-console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
+const mathstundents = (object) => {
+  let number = 0;
+  let keys = Object.keys(object);
+  for (let i = 0; i < keys.length; i += 1) {
+    if (object[keys[i]].materia === 'Matemática')
+    number += object[keys[i]].numeroEstudantes;
+  }
+  return number;
+}
 
+const createReport = (object, teacher) => {
+  let number = 0;
+  const aula = [];
+  let keys = Object.keys(object);
+  for (let i = 0; i < keys.length; i += 1) {
+    if (object[keys[i]].professor === teacher) {
+    number += object[keys[i]].numeroEstudantes;
+    aula.push(object[keys[i]].materia);
+    }
+  }
+  const report = {
+    professor: teacher,
+    aulas: aula,
+    estudantes: number
+  }
+  return report;
+}
+
+console.log(createReport(allLessons, 'Maria Clara'))
