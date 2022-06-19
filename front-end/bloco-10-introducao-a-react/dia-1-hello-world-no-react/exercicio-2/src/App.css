@@ -1,0 +1,15 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards {
+  width: 30%;
+  text-align: center;
+  background-color: rgb(34, 90, 71);
+  color: aliceblue;
+  border-radius: 60px 5px 50px 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
