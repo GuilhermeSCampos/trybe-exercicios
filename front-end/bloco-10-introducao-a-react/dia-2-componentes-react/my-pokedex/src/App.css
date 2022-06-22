@@ -1,0 +1,26 @@
+.card {
+  border: 1px solid gray;
+  display: flex;
+  width: 45%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3%;
+  justify-content: space-between;
+  border-radius: 20px;
+}
+
+.img {
+  width: 200px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#Dragonair {
+  width: 95%;
+  margin-bottom: auto;
+  margin-left: auto;
+}
+
