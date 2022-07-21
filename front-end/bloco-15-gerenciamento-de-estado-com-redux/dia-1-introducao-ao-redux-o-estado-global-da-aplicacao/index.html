@@ -3,120 +3,126 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+    <title>App Trybe</title>
+    <script src="https://unpkg.com/redux@latest/dist/redux.js"></script>
     <style>
       body {
-        height: 100vh;
-        margin: 0;
-        padding: 0;
-      }
-
-      #container {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      button {
-        height: 50px;
-        width: 200px;
+        color: white;
+        background-color: #333;
+        font-family: sans-serif;
+        text-align: center;
       }
     </style>
   </head>
   <body>
-    <div id="container">
-      <p>Color: <span id="value">white</span></p>
-      <button id="previous">Previous color</button>
-      <button id="next">Next color</button>
-      <button id="random">Random color</button>
+    <div class="container">
+      <h1>Minha Aplicação</h1>
+      <p>Status: Você está <span id="status">Offline</span></p>
+      <button id="toggle-theme">Light Mode</button>
+      <button id="toggle-status">Ficar Online</button>
     </div>
+    <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
     <script>
-      const previousButton = document.getElementById('previous');
-      const nextButton = document.getElementById('next');
-      const value = document.getElementById('value');
-      const container = document.getElementById('container');
-      const randomColorButton = document.getElementById('random');
-
-      const INITIAL_STATE = {
-        colors: ['white', 'black', 'red', 'green', 'blue', 'yellow'],
-        index: 0,
+      const THEME_INITIAL_STATE = {
+        theme: 'dark',
       };
 
-      const reducer = (state = INITIAL_STATE, action) => { 
-        switch(action.type) {
-          case "Color":
+      const themeReducer = (state = THEME_INITIAL_STATE, action) => {
+        switch (action.type) {
+          case 'theme':
             return {
               ...state,
-              index: action.index,
-              actualColor: state.colors[action.index]
-            };
-          case "random":
-            return  {
-              ...state,
-              colors: [...state.colors, action.cor],
-              actualColor: action.cor,
+              theme: action.theme,
             }
           default:
+            return state;
+        }
+      };
+
+      const STATUS_INITIAL_STATE = {
+        status: 'offline',
+      };
+
+      const statusReducer = (state = STATUS_INITIAL_STATE, action) => {
+        switch (action.type) {
+          case 'status':
             return {
               ...state,
-              actualColor: 'white',
-            };
+              status: action.status
+            }
+          default:
+            return state;
         }
-      }
+      };
 
-      const previousColor = () => {
-        if (store.getState().index > 0) {
+      const reducersCombined = Redux.combineReducers({themeReducer, statusReducer})
+
+      const themeButton = document.getElementById('toggle-theme');
+      const statusButton = document.getElementById('toggle-status');
+      const span = document.getElementById('status');
+
+      const store = Redux.createStore(reducersCombined);
+
+      const changeStatus = () => {
+        if ( store.getState().statusReducer.status === 'offline') {
           return {
-            type: "Color",
-            index: store.getState().index - 1
-          }
+            type: 'status',
+             status: 'online'
+            }
         }
-        return {
-          type: "Color",
-          index: store.getState().colors.length -1 ,
-        }
+        return {type: 'status', status: 'offline'}
       }
 
-      const nextColor = () => {
-        if (store.getState().index === store.getState().colors.length - 1) {
-          return {type: "Color", index: 0};
+      const changeTheme = (type) => {
+        if ( store.getState().themeReducer.theme === 'dark') {
+          return {
+            type: 'theme',
+             theme: 'light'
+            }
         }
-        return {type: "Color", index: store.getState().index + 1};
+        return {type: 'theme', theme: 'dark'}
       }
-
-      function criarCor() {
-      const oneChar = ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
-      let cor = '#';
-      const aleatorio = () => Math.floor(Math.random() * oneChar.length);
-      for (let i = 0; i < 6; i += 1) {
-          cor += oneChar[aleatorio()];
-      }
-      return {type:'random', cor};
-    }
-
-
-      const store = Redux.createStore(reducer);
 
       store.subscribe(() => {
-        value.innerHTML = store.getState().actualColor;
-        container.style.backgroundColor = store.getState().actualColor;
+        switch(store.getState().themeReducer.theme) {
+          case 'dark':
+            document.body.style.backgroundColor = '#dfece6';
+            document.body.style.color = '#333';  
+            themeButton.innerText = 'Light Mode'
+            return true;
+          case 'light':
+            document.body.style.backgroundColor = '#333';
+            document.body.style.color = 'white';  
+            themeButton.innerText = 'Dark Mode'
+          default:
+            return true;
+        }
       })
 
-      nextButton.addEventListener('click', () => {
-        store.dispatch(nextColor());
-      });
-      
-      previousButton.addEventListener('click', () => {
-        store.dispatch(previousColor())
-      });
-
-      randomColorButton.addEventListener('click', () => {
-        store.dispatch(criarCor());
+      store.subscribe(() => {
+        switch(store.getState().statusReducer.status) {
+          case 'online':
+            span.innerText = 'Online';
+            statusButton.innerText = 'Ficar Offline'
+            return true;
+          case 'offline':
+            span.innerText = 'Offline';
+            statusButton.innerText = 'Ficar Online'
+            return true;
+          default:
+            return true;
+        }
       })
 
+      themeButton.addEventListener('click', () => {
+        store.dispatch(changeTheme());
+      });
+
+      statusButton.addEventListener('click', () => {
+        store.dispatch(changeStatus());
+      });
+
+      console.log(store.getState());
     </script>
   </body>
 </html>
